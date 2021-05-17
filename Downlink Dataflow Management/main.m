@@ -1,15 +1,21 @@
-function main()
+% Please go through the readme.md file before running this code
+clc
+clear all
 %% Global Variables
 global param;
 global bs;
 global wifi;
 global ue;
 
-%%
+%% Initialization
 seed = 2;
-nuser = 80;
-nwifi = 10;
-P = 1;
+nuser = 80; % Number of UEs
+nwifi = 10; % Number of Wi-Fi APs in the network
+P = 1; % 1 for 5G-Flow network and 2 for standard 5G network
+
+% N denotes the user service priority. The below array is
+% for a case when 20 users are resquesting priority 1 (N(2)-N(1))
+% then next 20 users request priority 2 (N(3)-N(2)) and so on.
 N = [0,20,40,60,80];
 
 %% Parameters
@@ -82,6 +88,8 @@ for t = 0:0.25:sim_time
         fprintf("Number of Users: %d\n",param.nUEs);
         fprintf("Number of Wi-Fi APs: %d\n",param.nWiFi);
         fprintf("Seed: %d\n",seed);
+        fprintf("User service priority Distribution: [%d,%d,%d,%d]\n",N(2)-N(1),...
+            N(3)-N(2),N(4)-N(3),N(5)-N(4));
         fprintf("\n \n Progress: %3d %%",k/k0);
         k = k + k0;
     end   
@@ -179,5 +187,4 @@ end
 %     delay_pr(1), delay_pr(2),delay_pr(3),delay_pr(4),ue_bs_attach);
 % fclose(fileID);
 
-end
-%toc
+
