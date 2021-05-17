@@ -14,3 +14,8 @@ Simulation Loop: We have developed a time slot based simulator, wherein the simu
 received.
 
 Postprocessing: Once the simulation is complete, all the key attributes such as TCP throughput of individual RATs, total TCP throughput, and packet delay are analyzed. We define packet delay as the total time it takes for a packet to reach its destination node from the source node.
+
+
+For more details please refer to our paper. 
+
+Meghna Khaturia, Pranav Jha, and Abhay Karandikar. “5G-Flow: Flexible and Efficient 5G RAN Architecture Using OpenFlow,” https://arxiv.org/abs/2010.07528.
