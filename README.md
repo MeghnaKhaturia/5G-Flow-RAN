@@ -1,6 +1,6 @@
 # 5G-Flow-RAN
 
-We present a 5G multi-RAT system level simulator, developed in MATLAB. This simulator is designed for investigating the performance of dataflow management across multiple RATs.
+We present a 5G multi-RAT system level simulator, developed in MATLAB (v2020a). This simulator is designed for investigating the performance of dataflow management across multiple RATs.
 
 The simulator has been developed at IIT Bombay and is shared under MIT license.
 
